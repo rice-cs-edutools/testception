@@ -279,6 +279,15 @@ def main():
         print " ERROR: run updatemenu to generate updated menu"
         return
 
+    if str(args.projno) not in menu:
+        print " ERROR: invalid project number; update projects directory " \
+            + "and run\n    updatemenu to generate updated menu"
+        return
+    elif len(menu[str(args.projno)]["funclist"]) <= args.funcno:
+        print " ERROR: invalid function number; update projects directory " \
+            + "and run\n    updatemenu to generate updated menu"
+        return
+
     cwd = os.getcwd()
     config_file_path = cwd + "/projects/project" + str(args.projno) + "/func" \
         + str(args.funcno) + ".cfg"

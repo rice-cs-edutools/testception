@@ -236,7 +236,7 @@ def pick_programs(projno, funcno, importdir):
 
     f = open("./output/proj{0}_func{1}.py".format(projno, funcno), "w+")
     f.write("funcs = [")
-    for ind in indexlist[:-1]:
+    for ind in indexlist:
         count += 1
         fnames = fxn_names[ind]
         bodies = fxn_bodies[ind]
