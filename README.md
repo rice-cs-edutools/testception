@@ -221,13 +221,13 @@ Python 2 programs.
 1. (Re-)generate the menu of options based on the updated contents of the 
    ./projects directory:
 
-           python ./run.py updatemenu
+       python ./run.py updatemenu
 
    After the update, the menu will be displayed, including the names and 
    indices of all projects and functions. It can be re-displayed at any time
    using the command:
 
-           python ./run.py showmenu
+       python ./run.py showmenu
 
 2. From the menu, identify the \<projno> and \<funcno> for which to generate
    test exercises. Exercise generation involves several steps, each of 
@@ -284,10 +284,10 @@ Python 2 programs.
 
    If all of the above steps are desired, use the "all" command:
    
-           python ./run.py all -p <projno> -f <funcno> -s <student_dir>
+       python ./run.py all -p <projno> -f <funcno> -s <student_dir>
 
-           Optional flags:
-           -i <import_dir>
+       Optional flags:
+       -i <import_dir>
 
 3. Create the evaluation file for the function to be tested. This can be based
    off the example in ./evaluation/instructor_template.py; search for **TODO**
