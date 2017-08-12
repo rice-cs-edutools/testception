@@ -23,10 +23,11 @@ Python 2 programs.
 2. Add any student solutions which implement this project to a single 
    directory <student_dir>.
 
-3. Create a new subdirectory in ./projects named projectX, where X is an 
-   integer.
+3. Create a new subdirectory in ./projects named project\<projno>, where 
+   \<projno> is an integer.
 
-4. Within the ./project/projectX subdirectory, create the following files:
+4. Within the ./project/project\<projno> subdirectory, create the following 
+   files:
 
    1. `description.py`: must define the following variables:
       * projectname - a string
@@ -40,8 +41,8 @@ Python 2 programs.
    2. `solution.py`: must contain a correct implementation of each function
       in funclist.
 
-   3. For each function f in funclist, create a config file funcX.cfg, 
-      where X is an integer corresponding to its index in funclist. 
+   3. For each function f in funclist, create a config file func\<funcno>.cfg, 
+      where \<funcno> is an integer corresponding to its index in funclist. 
 
            --------------------------------------------------------------
            Each config file must include the following required sections:
@@ -88,7 +89,7 @@ Python 2 programs.
                                                                 <nonclasstype>
                                                                 is its type
 
-           <strval> ::= any valid Python string (surrounded by quotes)
+           <strval> ::= any valid Python string (surrounded by quotation marks)
 
            *NOTE: Keywords preceeding " str" in the <strtype> rule are used
            to restrict the domain of characters for string generation. An
@@ -145,7 +146,7 @@ Python 2 programs.
                                                               is its domain
            <intval> ::= any valid Python int
            <floatval> ::= any valid Python float
-           <strval> ::= any valid Python string (surrounded by quotes)
+           <strval> ::= any valid Python string (surrounded by quotation marks)
            <variable> ::= <strval>  ; used to define more sophisticated 
                                       relationships between arguments, see
                                       optional sections below
@@ -188,10 +189,12 @@ Python 2 programs.
 
            The grammar for specifying variables is as follows:
            ------------------------------------------------------
-           <variable> ::= <string> " " <int>"-"<int> ; <string> is the name,
-                                                       <int>-<int> is the
-                                                       range of allowable 
-                                                       values
+           <variable> ::= <strval> " " <intval>"-"<intval> ; <strval> is the name,
+                                                             <intval>-<intval> 
+                                                             is the range of
+                                                             allowable values
+           <intval> ::= any valid Python int
+           <strval> ::= any valid Python string (surrounded by quotation marks)
 
            See the contents of the ./projects/examples directory for examples.
 
@@ -218,10 +221,13 @@ Python 2 programs.
 1. (Re-)generate the menu of options based on the updated contents of the 
    ./projects directory:
 
-   `python ./run.py updatemenu`
+           python ./run.py updatemenu
 
    After the update, the menu will be displayed, including the names and 
-   indices of all projects and functions. 
+   indices of all projects and functions. It can be re-displayed at any time
+   using the command:
+
+           python ./run.py showmenu
 
 2. From the menu, identify the \<projno> and \<funcno> for which to generate
    test exercises. Exercise generation involves several steps, each of 
