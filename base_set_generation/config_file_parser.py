@@ -451,8 +451,10 @@ def _parse_type(arg_type, class_name=None, nested_class_fields=None):
                 keywords = []
 
             ## Check that the keywords are valid
-            if len(keywords) > 1 or (keywords and \
-                (not class_name and keywords[0] not in KEYWORDS[elem_type])):
+            if keywords and (len(keywords) > 1 or \
+                (not class_name and keywords[0] not in KEYWORDS[elem_type] \
+                and not (elem_type == "str" and keywords[0][0] == "\"" and \
+                keywords[0][-1] == "\""))):
                 raise ValueError
 
             ## Build the list (nested_types) corresponding to this line, 

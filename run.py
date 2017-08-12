@@ -150,7 +150,6 @@ def gen_base_test_set(projno, funcno, importdir=None):
     try:
         cfp.parse_config_file(projno, funcno, ms_outpath, importdir)
     except:
-        raise
         print " ERROR: failed to parse config file; please see " \
             + "./projects/examples for\n    examples of valid config files, and " \
             + "README for a complete specification of\n    the config file grammar"
