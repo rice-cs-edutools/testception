@@ -259,7 +259,17 @@ def main():
     ## Add provided module path to sys.path, so that files can import 
     ## provided modules directly
     if "i" in sub_cmds and args.import_dir:
+        ipath = os.path.abspath(args.import_dir)
+        if not os.path.exists(ipath):
+            print " ERROR: directory " + ipath + " does not exist"
+            return
         sys.path.insert(0, os.path.abspath(args.import_dir))
+
+    if "s" in sub_cmds and args.student_dir and not \
+        os.path.exists(os.path.abspath(args.student_dir)):
+        print " ERROR: directory " + os.path.abspath(args.student_dir) + \
+            " does not exist"
+        return
 
     ## Call proper function(s) according to cmd 
     if cmd == "updatemenu": 
