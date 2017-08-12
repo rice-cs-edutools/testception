@@ -223,20 +223,20 @@ Python 2 programs.
    After the update, the menu will be displayed, including the names and 
    indices of all projects and functions. 
 
-2. From the menu, identify the <projno> and <funcno> for which to generate
+2. From the menu, identify the \<projno> and \<funcno> for which to generate
    test exercises. Exercise generation involves several steps, each of 
    which depends on the output of the previous step:
 
    1. Gather corpus of implementations. If using student solutions,
-      all files should be placed in a single directory <studentdir>.
+      all files should be placed in a single directory \<studentdir>.
       Implementations of a given function should then be extracted
       from those files. The extraction process will separate 
       individual functions and strip out extra unwanted code that could
       slow the testing process. Stripped-down versions will be stored
-      in ./extracted_files/proj<projno>_func<funcno>.
+      in ./extracted_files/proj\<projno>_func\<funcno>.
 
            Required command and arguments:
-           `python ./run.py extract -p <projno> -f <funcno> -s <student_dir>`
+           python ./run.py extract -p <projno> -f <funcno> -s <student_dir>
 
            Optional flags:
            -i <import_dir>
@@ -245,40 +245,40 @@ Python 2 programs.
 
        A mutation tool, such as mutpy, may be used in place of, or in
        addition to, extraction to generate implementations. Mutant files 
-       should be placed in ./extracted_files/proj<projno>_func<funcno>.
+       should be placed in ./extracted_files/proj\<projno>_func\<funcno>.
 
     2. Generate the base test set used to identify bugs within the 
        corpus of implementations. Output will be placed in 
-       ./base_set_generation/output/proj<projno>_func<funcno>.py.
+       ./base_set_generation/output/proj\<projno>_func\<funcno>.py.
 
            Required command and arguments:
-           `python ./run.py gen -p <projno> -f <funcno>`
+           python ./run.py gen -p <projno> -f <funcno>
 
            Optional flags:
            -i <import_dir>
 
     3. Identify bugs within the corpus of implementations. Output will
-       be placed in ./test_output/proj<projno>_func<funcno>.pickle.
+       be placed in ./test_output/proj\<projno>_func\<funcno>.pickle.
 
            Required command and arguments:
-           `python ./run.py test -p <projno> -f <funcno>`
+           python ./run.py test -p <projno> -f <funcno>
 
            Optional flags:
            -i <import_dir>
 
     4. Select and order the subset of implementations to be displayed to
        students as they progress through the exercise. Output will be 
-       placed in ./output/proj<projno>_func<funcno>.py.
+       placed in ./output/proj\<projno>_func\<funcno>.py.
 
            Required command and arguments:
-           `python ./run.py pick -p <projno> -f <funcno>`
+           python ./run.py pick -p <projno> -f <funcno>
 
            Optional flags:
            -i <import_dir>
 
    If all of the above steps are desired, use the "all" command:
    
-           `python ./run.py all -p <projno> -f <funcno> -s <student_dir>`
+           python ./run.py all -p <projno> -f <funcno> -s <student_dir>
 
            Optional flags:
            -i <import_dir>
