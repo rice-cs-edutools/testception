@@ -3,6 +3,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Testception specific
+menu.json
+/base_set_generation/output/*proj*
+/base_set_generation/method_spec.py*
+/base_set_generation/base_test_set.py*
+/extracted_files/*
+/output/*
+/projects/proj*
+/test_output/*
+
 # C extensions
 *.so
 
