@@ -144,8 +144,8 @@ Python 2 programs.
                                                               field name, 
                                                               <nonclassdom>
                                                               is its domain
-           <intval> ::= any valid Python int
-           <floatval> ::= any valid Python float
+           <intval> ::= any valid positive Python int
+           <floatval> ::= any valid positive Python float
            <strval> ::= any valid Python string (surrounded by quotation marks)
            <variable> ::= <strval>  ; used to define more sophisticated 
                                       relationships between arguments, see
