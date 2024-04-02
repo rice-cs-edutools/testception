@@ -10,7 +10,7 @@ subset of the corpus in order of increasing "difficulty of testing" (~the
 number of bugs found during testing). These programs can then be provided
 to students as feedback as they work to develop their own test suites.
 
-Testception was developed at Rice University by Rebecca Smith, Terry Tang, 
+Testception was developed at Rice University by Rebecca Schreib, Terry Tang, 
 Joe Warren, and Scott Rixner. It is freely-distributable open-source software, 
 released under GNU GPL v3.0. It is written in Python 2, and compatible with 
 Python 2 programs.
